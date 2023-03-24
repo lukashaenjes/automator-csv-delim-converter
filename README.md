@@ -9,6 +9,9 @@ There is a work-around, but you will have to go through the ordeal of opening th
 
 This handy and privacy-friendly tool based on [macOS Automator](https://support.apple.com/guide/automator/welcome/mac) is here to help! In the blink of an eye, you can convert any proper CSV (you know, COMMA-separated) file to a semicolon-separated file which will work like a charm in a :de: Excel installation. In case you mess anything up or simply want to revert this operation, there's also a opposite action.
 
+## Demo
+![](delim-converter-demo.gif)
+
 ## Prerequisites
 Besides a Mac with Automator, you will need a running `gnu-sed` (or `gsed`) installation as the Action relies on pure `sed`-based text replacement. If you do not have `gsed` installed, you can get it via [Homebrew](https://formulae.brew.sh/formula/gnu-sed) with `brew install gnu-sed`.
 
