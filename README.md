@@ -42,9 +42,10 @@ gnu-sed`.
 In this GitHub repository, click on the green "Code" button and select "Download
 ZIP". Unzip the downloaded file and double-click the
 `csv_comma_to_semicolon.workflow` and / or `csv_semicolon_to_comma.workflow`
-file. This will install the Action in your macOS Automator library. The Action
-will be available in the "Quick Actions" menu in the Finder or (depending on
-your view settings) below the file information in the sidebar.
+file. This will install the Action in your macOS Automator library.
+Alternatively, you can also copy the files to `~/Library/Services` manually. The
+Action will be available in the "Quick Actions" menu in the Finder or (depending
+on your view settings) below the file information in the sidebar.
 
 ## Behind the scenes
 The tool is built with a two-step macOS Automator Action which
