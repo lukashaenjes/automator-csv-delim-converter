@@ -55,10 +55,10 @@ The tool is built with a two-step macOS Automator Action which
 
 ```bash
 if [[ $(uname -m) == 'arm64' ]]; then
-	# Apple Silicon
+    # Apple Silicon
     GSED_PATH="/opt/homebrew/bin/gsed"
 else
-	# Intel
+    # Intel
     GSED_PATH="/usr/local/bin/gsed"
 fi
 
