@@ -54,12 +54,24 @@ The tool is built with a two-step macOS Automator Action which
 2. runs the following shell script:
 
 ```bash
+if [[ $(uname -m) == 'arm64' ]]; then
+	# Apple Silicon
+    GSED_PATH="/opt/homebrew/bin/gsed"
+else
+	# Intel
+    GSED_PATH="/usr/local/bin/gsed"
+fi
+
 for f in "$@"
 do
-	/usr/local/bin/gsed -i 's=;=,=g' $f
+	"$GSED_PATH" -i 's=;=,=g' "$f"
 done
 ```
 
-This simply replaces all occurrences of `;` with `,` in each selected file. Note
+As the location of the `gsed` binary installed via Homebrew can vary depending
+on whether you are using an Intel or Apple Silicon Mac, the script checks for
+the architecture and sets the path accordingly.
+
+The script then simply replaces all occurrences of `;` with `,` in each selected file. Note
 that this is done *in-place* (`-i`) but can be reverted with the other Action
 which does the exact opposite.
